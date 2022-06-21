@@ -8,4 +8,6 @@ import org.springframework.stereotype.Repository
 @Repository
 interface AlquilerRepository : JpaRepository<AlquilerEntity, Int> {
     fun findAllByUsuarioid(id: Int): AlquilerResponse
+    fun findByIdAndSacado(id: Int, sacado: Boolean): AlquilerEntity
+    fun findByIdAndPagado(id: Int, pagado: Boolean): AlquilerEntity
 }

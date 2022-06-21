@@ -1,5 +1,7 @@
 package com.dgcheca.microserviceContabilidad.controller
 
+import com.dgcheca.microserviceContabilidad.model.AlquilerDto
+import com.dgcheca.microserviceContabilidad.model.FacturaDto
 import com.dgcheca.microserviceContabilidad.model.response.FacturaResponse
 import com.dgcheca.microserviceContabilidad.service.FacturaService
 import org.springframework.beans.factory.annotation.Autowired
@@ -18,5 +20,20 @@ class FacturaController {
     @GetMapping("/usuario/{id}")
     fun verFacturas(@RequestParam id: Int): ResponseEntity<FacturaResponse> {
         return ResponseEntity(facturaService.verFacturas(id), HttpStatus.OK)
+    }
+
+    @PostMapping("/nuevaFactura")
+    fun nuevaFactura(@RequestParam factura: FacturaDto): ResponseEntity<FacturaDto> {
+        return ResponseEntity(facturaService.nuevoFactura(factura), HttpStatus.OK)
+    }
+
+    @PutMapping("/sacarFactura/{id}")
+    fun sacarFactura(@PathVariable id: Int): ResponseEntity<FacturaDto> {
+        return ResponseEntity(facturaService.sacarFactura(id), HttpStatus.OK)
+    }
+
+    @PutMapping("/pagarFactura/{id}")
+    fun pagarFactura(@PathVariable id: Int): ResponseEntity<FacturaDto> {
+        return ResponseEntity(facturaService.sacarFactura(id), HttpStatus.OK)
     }
 }

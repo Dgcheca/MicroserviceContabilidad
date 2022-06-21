@@ -1,0 +1,37 @@
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+build/
+*.war
+
+# Gradle files
+.gradle/
+
+# Log Files
+*.log
+
+# Intellij
+*.iml
+.idea/
+#.idea/workspace.xml
+#.idea/tasks.xml
+#.idea/gradle.xml
+#.idea/dictionaries
+#.idea/libraries
+
+# Google Services (e.g. APIs or Firebase)
+google-services.json
+
+# MacOS generated files
+.DS_Store
+# Elastic Beanstalk Files
+/.shelf/S
+/node_modules/
+/yarn.lock
+.vscode
+/ohme-car-api/build/**
+.project

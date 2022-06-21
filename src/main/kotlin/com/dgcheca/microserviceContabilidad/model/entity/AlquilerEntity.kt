@@ -3,14 +3,14 @@ package com.dgcheca.microserviceContabilidad.model.entity
 import javax.persistence.*
 
 @Entity
-@Table(name = "facturas")
-data class FacturaEntity(
+@Table(name = "alquileres")
+data class AlquilerEntity(
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "facturas_generator")
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "alquileres_generator")
     var id: Int? = null,
     var usuarioid: Int = 0,
-    var categoriaId: Int = 0,
-    var mesId: Int = 0,
+    var mesNumero: Int = 0,
+    var mesNombre: String = "",
     var fecha: String = "",
     var sacado: Boolean = false,
     var pagado: Boolean = false,

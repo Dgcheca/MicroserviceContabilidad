@@ -1,6 +1,5 @@
 package com.dgcheca.microserviceContabilidad.controller
 
-import com.dgcheca.microserviceContabilidad.model.AlquilerDto
 import com.dgcheca.microserviceContabilidad.model.FacturaDto
 import com.dgcheca.microserviceContabilidad.model.response.FacturaResponse
 import com.dgcheca.microserviceContabilidad.service.FacturaService
